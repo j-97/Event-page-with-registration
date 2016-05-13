@@ -1,0 +1,23 @@
+body{
+font-size:30px;}
+h1{
+font-size:45px;}
+p{
+font-size:17px;
+}
+div{
+margin-bottom:20px;}
+#header {
+background-color: #efefef;
+color:white;
+text-align:center;
+padding:5px;
+height:200px;
+}
+#sta {
+background-color:#66b2ff;
+color:white;
+text-align:center;
+padding:5px;
+height:100px;
+}
