@@ -10,6 +10,8 @@
  <style>
  body{
 		font-size:30px;
+		margin-left:2%;
+		margin-right:2%;
 		}
 mar{
 		margin-top:50px;}
@@ -39,6 +41,7 @@ p{
 	margin-top:20px
 }
 .texta{
+	align:left;
 	font-size:45px;
 	margin-left:50px;
 	margin-top:250px;
@@ -49,7 +52,7 @@ width:100%;
 background-color:transparent;
 height:30px;
 }
-fon{
+.fon{
 	font-color:white;}
 .img-size{
 		width:75px;
@@ -74,64 +77,146 @@ fon{
 	  }
 .nav:hover
 {
- background-color:blue;
+ background-color:#000040;
+ 
+}
+.header img {
+  float: left;
+  width: 40px;
+  height: 40px;
+  background: #555;
 }
 
+.header a {
+  position: relative;
+  top: 5px;
+  left: 10px;
+  font-size:30px;
+}
+.hvr-grow {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+.hvr-grow:hover, .hvr-grow:focus, .hvr-grow:active {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+/* Underline From Center */
+.hvr-underline-from-center {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  overflow: hidden;
+}
+.hvr-underline-from-center:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  background: #2098d1;
+  height: 4px;
+  -webkit-transition-property: left, right;
+  transition-property: left, right;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-underline-from-center:hover:before, .hvr-underline-from-center:focus:before, .hvr-underline-from-center:active:before {
+  left: 0;
+  right: 0;
+}
+.cl{
+	display:block;
+	background-color:grey;
+	padding:20px;
+}
+img{
+	max-width:100%;}
+@media only screen and (max-width: 480px) {
+	.ab{
+		width:60%;
+		margin-bottom:10px;
+		}
+	.kb{
+		width:80%;
+		margin-bottom:10px;
+		}
+	.jc{
+		margin-bottom:10px;
+		}
+	.tp{
+		margin-top:20px;}
+}
 	</style>
 </head>
 <body>
 
 <div class="container-fluid" >
 <div class="row fon">
-<nav class="navbar navbar-transparent navbar-fixed-top">
-<div class="navbar-inner">
+<nav class="navbar navbar-fixed-top">
   <div class="container-fluid">
-   <div class="navbar-header">
-   <h5 style="font-size:30px" class="fon"><img class="navbar-brand img-size" src="icon.jpg"><strong>SANDY</strong></h5>
- 
-   </div>
-    <ul class="nav navbar-nav navbar-right">
-      <li class="active"><a href="#">Home</a></li>
-	  <li class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="about.html">About
-        </a>
-        <ul class="dropdown-menu">
-          <li><a href="#">Testimonial</a></li>
-          <li><a href="#">Archieves</a></li>
-          <li><a href="#">FAQs</a></li> 
-        </ul>
-      </li>
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+	  <div class="header">
+    <a class="navbar-brand fon" href="#"><img src="icon.jpg">SANDY</a>
+	  </div>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="active"><a href="#">Home</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">About<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Testimonial</a></li>
+            <li><a href="#">Archieve</a></li>
+            <li><a href="#">FAQs</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Services</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Projects<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Project2</a></li>
+            <li><a href="#">Project3</a></li>
+            <li><a href="#">Project4</a></li>
+          </ul>
+        </li>
+		<li><a href="#">Blog</a></li>
+		<li><a href="#">Contacts</a></li>
+      </ul>
       
-      <li><a href="#">Services</a></li> 
-     <li class="dropdown">
-        <a  data-toggle="dropdown" href="#">Projects
-        </a>
-        <ul class="dropdown-menu">
-          <li><a href="#">Project2</a></li>
-		  <li class="dropdown">
-		  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Project3
-		 </a>
-		  <ul class="dropdown-menu">
-		  <li><a href="#">Category1</a></li>
-          <li><a href="#">Category2</a></li>
-          <li><a href="#">Category3</a></li> 
-        </ul>
-		</li>
-		<li><a href="#">Project4</a></li>
-		</ul>
-      </li>
-	  <li><a href="#">Blog</a></li> 
-	  <li><a href="#">Contacts</a></li> 
-    </ul>
-</div>
-</div> 
-<script>
+    </div>
+  </div>
+  <script>
 $(document).ready(function(){
 
     $(window).scroll(function(){
 
     if($(window).scrollTop()>100)
-    $(".nav").css({"background-color" : "#236B8E"});
+    $(".nav").css({"background-color" : "black"});
 
     else
     $(".nav").css({"background-color" : "rgba(0,0,0,1)"});
@@ -196,35 +281,35 @@ $(document).ready(function(){
 <h3>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh dolore  euismod
 tincidunt ut laoreet dolore ex magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
 nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</h3>
-<a href="service.html" class="btn btn-info" role="button">OUR SERVICES</a>
-<a href="contact.html" class="btn btn-danger" role="button">CONTACT US</a>
+<a href="service.html" class="btn btn-info ab" role="button">OUR SERVICES</a>
+<a href="contact.html" class="btn btn-danger ab" role="button">CONTACT US</a>
 </div>
 <div class="row">
 <center>
-<div class="col-sm-3">
-<span class="glyphicon glyphicon-globe"></span></div>
-<div class="col-sm-3"><span class="glyphicon glyphicon-education"></span></div>
-<div class="col-sm-3"><span class="glyphicon glyphicon-leaf"></span></div>
-<div class="col-sm-3"><span class="glyphicon glyphicon-wrench"></span></div>
+<div class="col-sm-3 tp">
+	<span class="glyphicon glyphicon-globe"></span>
+	<h2>Management</h2>
+	<p>Dolor amet, consectetuer elit, sed diam ipsum dolor nonummy nibh euismod tincidunt ut laoreet dolore adipiscing elit magna aliquam erat volutpat.</p>
+	<hr class="hvr-underline-from-center">
 </div>
-<div class="row">
-<center>
 <div class="col-sm-3">
-<h2>Management</h2></div>
-<div class="col-sm-3"><h2>Education</h2></span></div>
-<div class="col-sm-3"><h2>Solutions</h2></span></div>
-<div class="col-sm-3"><h2>Support</h2></span></div>
+<span class="glyphicon glyphicon-education"></span>
+<h2>Education</h2>
+<p>Claritas est etiam processus dynamicus, sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam mutationem.
+</p>
 </div>
-<div class="row spacdiv">
 <div class="col-sm-3">
-<p>Dolor amet, consectetuer elit, sed diam ipsum dolor nonummy nibh euismod tincidunt ut laoreet dolore adipiscing elit magna aliquam erat volutpat.</p>
+<span class="glyphicon glyphicon-leaf"></span>
+<h2>Solutions</h2>
+<p>Dolor amet, consectetuer elit, sed diam ipsum dolor nonummy nibh euismod tincidunt ut laoreet dolore adipiscing elit magna aliquam erat volutpat.
+</p>
 </div>
-<div class="col-sm-3"><p>Claritas est etiam processus dynamicus, sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam mutationem.
-</p></div>
-<div class="col-sm-3"><p>Dolor amet, consectetuer elit, sed diam ipsum dolor nonummy nibh euismod tincidunt ut laoreet dolore adipiscing elit magna aliquam erat volutpat.
-</p></div>
-<div class="col-sm-3"><p>Claritas est etiam processus dynamicus, sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam mutationem.
-</p></div>
+<div class="col-sm-3">
+<span class="glyphicon glyphicon-wrench"></span>
+<h2>Support</h2>
+<p>Claritas est etiam processus dynamicus, sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam mutationem.
+</p>
+</div>
 </div>
 <div class="row spacdiv">
 <center>
@@ -232,20 +317,20 @@ nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commod
 <h2>Our Work</h2>
 </div>
 <div class="row spacdiv">
-<button type="button" class="btn btn-primary active">All works</button>
-<button type="button" class="btn btn-primary">Digital Marketing</button>
-<button type="button" class="btn btn-primary">Static & Analysis</button>
-<button type="button" class="btn btn-primary">Business Solutions</button>
+<button type="button" class="btn btn-default active kb">All works</button>
+<button type="button" class="btn btn-default kb">Digital Marketing</button>
+<button type="button" class="btn btn-default kb">Static & Analysis</button>
+<button type="button" class="btn btn-default kb">Business Solutions</button>
 </div>
 <div class="row spacdiv">
-<div class="col-sm-4"><img src="1.jpg" class="img-rounded"  width="304" height="236"></div>
-<div class="col-sm-4"><img src="2.jpg" class="img-rounded" alt="Cinque Terre" width="304" height="236"></div>
-<div class="col-sm-4"><img src="3.jpg" class="img-rounded" alt="Cinque Terre" width="304" height="236"></div>
+<div class="col-sm-4"><img src="1.jpg" class="img-rounded hvr-grow jc"  width="304" height="236"></div>
+<div class="col-sm-4"><img src="2.jpg" class="img-rounded hvr-grow jc" alt="Cinque Terre" width="304" height="236"></div>
+<div class="col-sm-4"><img src="3.jpg" class="img-rounded hvr-grow jc" alt="Cinque Terre" width="304" height="236"></div>
 </div>
 <div class="row spacdiv" >
-<div class="col-sm-4"><img src="4.jpg" class="img-rounded" alt="Cinque Terre" width="304" height="236"></div>
-<div class="col-sm-4"><img src="5.jpg" class="img-rounded" alt="Cinque Terre" width="304" height="236"></div>
-<div class="col-sm-4"><img src="6.jpg" class="img-rounded" alt="Cinque Terre" width="304" height="236"></div>
+<div class="col-sm-4"><img class="hvr-grow jc" src="4.jpg" class="img-rounded" alt="Cinque Terre" width="304" height="236"></div>
+<div class="col-sm-4"><img src="5.jpg" class="img-rounded hvr-grow jc" alt="Cinque Terre" width="304" height="236"></div>
+<div class="col-sm-4"><img src="6.jpg" class="img-rounded hvr-grow jc" alt="Cinque Terre" width="304" height="236"></div>
 </div>
 </div>
 <div id="header" class="space spacdiv">
@@ -267,7 +352,7 @@ iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum 
 <div class="col-sm-2"><img src="15.png"></div>
 <div class="col-sm-2 spacdiv"><img src="16.png"></div>
 </div>
-
+</div>
 <div class="row">
 <div class="col-sm-6 abc">Subscribe to our newsletter and be in touch</div>
  <div class="email-box">
